@@ -1,0 +1,75 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:ChatBox">
+
+
+    <Color x:Key="BackgroundLight">#eee</Color>
+    <SolidColorBrush x:Key="BackgroundLightBrush" Color="{StaticResource BackgroundLight}"></SolidColorBrush>
+
+    <Color x:Key="BackgroundVeryLight">#fafafa</Color>
+    <SolidColorBrush x:Key="BackgroundVeryLightBrush" Color="{StaticResource BackgroundVeryLight}"></SolidColorBrush>
+
+    <Color x:Key="ForegroundMain">#909090</Color>
+    <SolidColorBrush x:Key="ForegroundMainBrush" Color="{StaticResource ForegroundMain}"></SolidColorBrush>
+
+    <Color x:Key="ForegroundVeryDark">#808080</Color>
+    <SolidColorBrush x:Key="ForegroundVeryDarkBrush" Color="{StaticResource ForegroundVeryDark}"></SolidColorBrush>
+
+
+    <Color x:Key="ForegroundLight">#fff</Color>
+    <SolidColorBrush x:Key="ForegroundLightBrush" Color="{StaticResource ForegroundLight}"></SolidColorBrush>
+
+    <Color x:Key="ThemedColor">#ffffab91</Color>
+    <SolidColorBrush x:Key="ThemedColorBrush" Color="{StaticResource ThemedColor}"></SolidColorBrush>
+
+
+    <Color x:Key="BlueLigatCaynBabe">#43abcf</Color>
+    <SolidColorBrush x:Key="BlueLight" Color="{StaticResource BlueLigatCaynBabe}"></SolidColorBrush>
+
+    <Color x:Key="RedColorLight">#ff4745</Color>
+    <SolidColorBrush x:Key="Red045" Color="{StaticResource RedColorLight}"></SolidColorBrush>
+
+    <Color x:Key="Green">#00c542</Color>
+    <SolidColorBrush x:Key="Leavy Brush" Color="{StaticResource Green}"></SolidColorBrush>
+
+
+    <Color x:Key="Xox">#d6daeb</Color>
+    <SolidColorBrush x:Key="XoxBrush" Color="{StaticResource Xox}"></SolidColorBrush>
+
+
+    <Color x:Key="Mess">#0078ff</Color>
+    <SolidColorBrush x:Key="MessengerBlue" Color="{StaticResource Mess}"></SolidColorBrush>
+
+
+    <Color x:Key="Microsoft">#57a0d3</Color>
+    <SolidColorBrush x:Key="MicrosoftBlue" Color="{StaticResource Microsoft}"></SolidColorBrush>
+
+
+    <Color x:Key="MyPersonalFavCyan">#43e0d0</Color>
+    <SolidColorBrush x:Key="MyCyan" Color="{StaticResource MyPersonalFavCyan}"></SolidColorBrush>
+
+    <Color x:Key="Megneto">#ef43e1</Color>
+    <SolidColorBrush x:Key="MarvelMagento" Color="{StaticResource Megneto}"></SolidColorBrush>
+
+
+    <Color x:Key="FreshBoy">#f1cf83</Color>
+    <SolidColorBrush x:Key="FreshBoyStick" Color="{StaticResource FreshBoy}"></SolidColorBrush>
+
+
+    <Color x:Key="Luke">#1197f2</Color>
+    <SolidColorBrush x:Key="LukeLightSaberDegobah" Color="{StaticResource Luke}"></SolidColorBrush>
+
+
+    <Color x:Key="Oranges">#ffa900</Color>
+    <SolidColorBrush x:Key="OrageColorBrush" Color="{StaticResource Oranges}"></SolidColorBrush>
+
+
+    <Color x:Key="ForeDark">#ddd</Color>
+    <SolidColorBrush x:Key="ForeDarkBrush" Color="{StaticResource ForeDark}"></SolidColorBrush>
+
+
+    <Color x:Key="DarkCyan">#43abe9</Color>
+    <SolidColorBrush x:Key="BluishCyan" Color="{StaticResource DarkCyan}"></SolidColorBrush>
+
+
+</ResourceDictionary>

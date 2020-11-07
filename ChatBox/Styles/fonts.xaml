@@ -1,0 +1,35 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:ChatBox" xmlns:system="clr-namespace:System;assembly=mscorlib">
+    
+    <FontFamily x:Key="Thin">pack://application;,,,/Fonts/#Lato Light</FontFamily>
+    <FontFamily x:Key="Reg">pack://application;,,,/Fonts/#Lato Regular</FontFamily>
+    <FontFamily x:Key="Bold">pack://application;,,,/Fonts/#Lato Bold</FontFamily>
+
+    <Style TargetType="{x:Type Control}"  x:Key="BasicStyle">
+        <Setter Property="FontFamily" Value="{StaticResource Reg}"/>
+    </Style>
+
+
+    <Style TargetType="{x:Type TextBlock}"  x:Key="BasicTextBlockStyle">
+        <Setter Property="FontFamily" Value="{StaticResource Thin}"/>
+    </Style>
+
+    <Style TargetType="{x:Type Button}"  BasedOn="{StaticResource BasicStyle}"/>
+    <Style TargetType="{x:Type Label}"  BasedOn="{StaticResource BasicStyle}"/>
+    <Style TargetType="{x:Type TextBlock}"  BasedOn="{StaticResource BasicTextBlockStyle}"/>
+    <Style TargetType="{x:Type TextBox}"  BasedOn="{StaticResource BasicStyle}"/>
+
+
+
+
+    <system:Double x:Key="FSReg" >20</system:Double>
+    <system:Double x:Key="FSSmall" >14</system:Double>
+    <system:Double x:Key="FSLarge" >30</system:Double>
+    <system:Double x:Key="FSMed" >26</system:Double>
+
+
+
+
+
+</ResourceDictionary>

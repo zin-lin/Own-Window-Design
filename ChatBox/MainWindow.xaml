@@ -1,0 +1,173 @@
+﻿<Window x:Class="ChatBox.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ChatBox"
+        mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"
+        x:Name="AppWindow"
+        AllowsTransparency="True"
+        WindowStyle="None"
+
+        Title="Welcome Mates" Height="500" Width="800">
+
+
+    <Window.Resources>
+        <Style TargetType="{x:Type local:MainWindow}">
+            <Setter Property="Template">
+                <Setter.Value >
+
+                    <ControlTemplate TargetType="{x:Type Window}"  >
+                        <!--Outline Margin-->
+                        <Border  Padding="{Binding OuterMarginSizeThinkness, FallbackValue=10}">
+                            <!--This is Our Main Window -->
+                            
+                            
+                            <Grid > 
+                                <!--OurBorder-->
+                                
+                                <!-- Opacity Mask For Corner Static-->
+                                <Border x:Name="Conatainer" Background="{StaticResource BackgroundLightBrush}" CornerRadius="{Binding WindowRadiusSizeRadius,
+                                    FallbackValue=10}"/>
+
+                                <Border CornerRadius="{Binding WindowRadiusSizeRadius, FallbackValue=12}"
+                                        Background="{StaticResource ForegroundLightBrush}">
+                                    <Border.Effect>
+                                        <!-- Main Window Shadow-->
+                                        <DropShadowEffect ShadowDepth="0" Opacity="0.3"></DropShadowEffect>
+                                    </Border.Effect>
+                                </Border>
+
+                                <!-- main Content's OutLine Window Border-->
+
+                                    <Grid>
+                                        
+                                        <!-- Corner Clicking -->
+                                        <Grid.OpacityMask>
+
+                                            <VisualBrush Visual="{Binding ElementName=Conatainer}"/>
+                                        </Grid.OpacityMask>
+
+                                        <Grid.RowDefinitions>
+                                            <!-- Title Bar-->
+                                            <RowDefinition Height="{Binding TitlePro, FallbackValue=42}"/>
+                                          
+                                            <!-- Window's Content-->
+
+                                            <RowDefinition Height="*"/>
+                                            
+                                          
+
+
+                                        </Grid.RowDefinitions>
+                                        
+                                        <!--Title Bar-->
+                                        <Grid Grid.Column="0" Panel.ZIndex="1" WindowChrome.IsHitTestVisibleInChrome="True"  >
+
+                                            <Grid.ColumnDefinitions>
+                                            <!-- Icon -->
+                                            <ColumnDefinition Width="Auto"/>
+                                            <!-- Title-->
+                                            <ColumnDefinition Width="*"/>
+                                            <!-- Window's Control-->
+                                            <ColumnDefinition Width="Auto"></ColumnDefinition>
+
+                                        </Grid.ColumnDefinitions>
+                                        
+                                        <!-- Icon Button-->
+                                            <Button Style="{StaticResource SystemIconButton}" 
+                                            Command="{Binding MenuCommand}"  WindowChrome.IsHitTestVisibleInChrome="True"
+                                            >
+                                                <Image Source="images/logo/mml.png"/>
+                                            </Button>
+                                            
+                                           <!-- Title Text-->
+
+                                            <Viewbox Grid.Column="0" Grid.ColumnSpan="3" Margin="4" Stretch="Uniform">
+                                            <StackPanel>
+
+                                                <TextBlock FontFamily="{StaticResource Reg}" FontSize="{StaticResource FSLarge}">
+                                                    
+                                                  <Run Text="M" Foreground="{StaticResource ThemedColorBrush}" /><Run Text="Y" Foreground="{StaticResource MicrosoftBlue}" /><Run Text="M" Foreground="{StaticResource MarvelMagento}" /><Run Text="A" Foreground="{StaticResource LukeLightSaberDegobah}" /><Run Text="T" Foreground="{StaticResource Leavy Brush}" /><Run Text="E" Foreground="{StaticResource Red045}" />
+
+
+                                                </TextBlock>
+
+                                                <TextBlock Text="@Companionship" Foreground="{StaticResource XoxBrush}" TextAlignment="Center"
+                                                           HorizontalAlignment="Center"> </TextBlock>
+                                                
+                                            </StackPanel>
+                                                
+                                                <!-- Windows Buttons-->
+
+                                              
+
+                                            </Viewbox>
+                                            <StackPanel Grid.Column="2" Orientation="Horizontal">
+                                                <Button Content="-" Style="{StaticResource WindowControlButton}" Padding="12 0"
+                                                       Command="{Binding MinimizeCommand}"
+                                                        />
+                                            <Button Content="🗖"  Style="{StaticResource WindowControlButton}"  Padding="12 0"
+                                                       Command="{Binding MaximizeCommand}"
+                                                        
+                                                        />
+                                                <Button Content="X"  Style="{StaticResource WindowCloseButton}"  Padding="12 0"
+                                                       Command="{Binding CloseCommand}"
+                                                        
+                                                        />
+
+                                            </StackPanel>
+                                        </Grid>
+                                        
+                                        <!-- Drop Shadow For NavaBar-->
+
+                                        
+                                        
+                                        <!-- Main Window Page COntetnt For Our App : Real One this Time-->
+
+                                    <Border Grid.Row="1" Padding="{Binding InnerContentPadding}">
+                                        
+                                        <!--Yayy! Contents Here -->
+                                        <ContentPresenter Content="{TemplateBinding Content}"/>
+
+
+                                    </Border>
+
+                                </Grid>
+                                    
+                              
+
+                            </Grid>
+                            
+                        </Border>
+                    </ControlTemplate>
+
+                </Setter.Value>
+            </Setter>
+            
+        </Style>
+    </Window.Resources>
+    
+    <WindowChrome.WindowChrome>
+
+        <WindowChrome 
+            ResizeBorderThickness="{Binding ResizeBorderThickness}"
+            CaptionHeight="{Binding TitleHeight}"
+            CornerRadius="0"
+            GlassFrameThickness="0"
+            
+            />
+    </WindowChrome.WindowChrome>
+    
+    <Grid Background="AliceBlue">
+
+        <Frame x:Name="MainFrame" Content="{Binding CurrentPage, 
+            Converter={local:ApplicationPageValueConvertor}}"
+/>
+
+    </Grid>
+</Window>
+    
+    
+    
